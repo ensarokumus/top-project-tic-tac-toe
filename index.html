@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOP - Tic Tac Toe</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="javascript.js" defer></script>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOP - Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="container-menu">
+        <header>
+          <h1>
+            <span class="tic">tic</span><br />
+            <span class="tac">tac</span><br />
+            <span class="toe">toe</span>
+          </h1>
+        </header>
+        <div class="scoreboard">
+          <p>Start game or select player:</p>
+          <div class="score-x">
+            <p class="player1 sign">x</p>
+            <p class="score">1</p>
+          </div>
+          <div class="score-o">
+            <p class="player2 sign">o</p>
+            <p class="score">0</p>
+          </div>
+          <div class="restart">
+            <p><i class="material-icons">refresh</i></p>
+            Restart game?
+          </div>
+        </div>
+      </div>
+      <div class="container-game">
+        <div class="game-grid row1 column1 color-x" id="1-1">x</div>
+        <div class="game-grid row1 column2 color-x" id="1-2">x</div>
+        <div class="game-grid row1 column3 color-x" id="1-3">x</div>
+        <div class="game-grid row2 column1 color-o" id="2-1">o</div>
+        <div class="game-grid row2 column2 color-o" id="2-2">o</div>
+        <div class="game-grid row2 column3 color-o" id="2-3">o</div>
+        <div class="game-grid row3 column1 color-x" id="3-1">x</div>
+        <div class="game-grid row3 column2 color-x" id="3-2">x</div>
+        <div class="game-grid row3 column3 color-x" id="3-3">x</div>
+      </div>
+    </div>
+  </body>
 </html>

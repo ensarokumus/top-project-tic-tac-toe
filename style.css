@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gruppo&display=swap');
+
+:root {
+  --clr-light-grey: rgb(96, 91, 90);
+  --clr-dark-grey: rgb(30, 27, 28);
+  --clr-yellow: rgb(255, 210, 5);
+  --clr-pink: rgb(235, 45, 125);
+  --clr-white: rgb(255, 255, 255);
+  --fw-400: 400;
+  --container-width: 600px;
+}
+
+/* CSS reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, var(--clr-light-grey), var(--clr-dark-grey));
+  font-family: "Do Hyeon", sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 80%;
+  text-align: left;
+}
+
+.tic {
+  color: var(--clr-yellow);
+  text-shadow: 0 0 1.3rem var(--clr-yellow);
+}
+
+.tac {
+  color: var(--clr-white);
+  text-shadow: 0 0 1.3rem var(--clr-white);
+}
+
+.toe {
+  color: var(--clr-pink);
+  text-shadow: 0 0 1.3rem var(--clr-pink);
+}
+
+.container-main {
+  max-width: calc(var(--container-width) * 2 );
+  margin: 8rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.container-game {
+  max-width: var(--container-width);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.game-grid {
+  width: 120px;
+  height: 120px;
+  color: var(--clr-white);
+  font-size: 5rem;
+  display: grid;
+  place-items: center;
+}
+
+.column1,
+.column2 {
+  border-right: 5px solid white;
+}
+
+.row1,
+.row2 {
+  border-bottom: 5px solid white;
+}
+
+.color-x {
+  color: var(--clr-yellow);
+}
+
+.color-o {
+  color: var(--clr-pink);
+}
+
+.container-menu {
+  max-width: calc(var(--container-width) * 4 / 5);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+header {
+  grid-column: 1 / 1;
+}
+
+.scoreboard {
+  grid-column: 2 / 2;
+}
+
+.scoreboard > p {
+  color: var(--clr-white);
+  font-family: 'Gruppo', sans-serif;  
+  font-size: 1.2rem;
+}
+
+.score-x, .score-o {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 4rem;
+  padding: 0.2rem;
+  font-size: 2rem;
+  border-bottom: 2px solid;
+}
+
+.score-x {
+  color: var(--clr-yellow);
+}
+
+.score-o {
+  color: var(--clr-pink);
+}
+
+.score {
+  color: var(--clr-white);
+}
+
+.restart {
+  margin: 2rem auto 0;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid;
+  width: 180px;
+  font-family: 'Gruppo', sans-serif;
+  font-size: 1.2rem;
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
