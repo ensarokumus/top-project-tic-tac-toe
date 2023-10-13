@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gruppo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gruppo&display=swap");
 
 :root {
   --clr-light-grey: rgb(96, 91, 90);
@@ -25,7 +25,11 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, var(--clr-light-grey), var(--clr-dark-grey));
+  background: linear-gradient(
+    135deg,
+    var(--clr-light-grey),
+    var(--clr-dark-grey)
+  );
   font-family: "Do Hyeon", sans-serif;
 }
 
@@ -51,7 +55,7 @@ h1 {
 }
 
 .container-main {
-  max-width: calc(var(--container-width) * 2 );
+  max-width: calc(var(--container-width) * 2);
   margin: 8rem auto;
   padding: 2rem;
   display: flex;
@@ -78,8 +82,13 @@ h1 {
   place-items: center;
 }
 
-.grid-cell:hover{
-  background: radial-gradient(circle, rgba(30, 27, 28, 1) 0%, rgba(30, 27, 28, 0.5) 35%, rgba(30, 27, 28, 0) 70%);
+.grid-cell:hover {
+  background: radial-gradient(
+    circle,
+    rgba(30, 27, 28, 1) 0%,
+    rgba(30, 27, 28, 0.5) 35%,
+    rgba(30, 27, 28, 0) 70%
+  );
 }
 
 .column1,
@@ -94,10 +103,12 @@ h1 {
 
 .color-x {
   color: var(--clr-yellow);
+  text-shadow: 0 0 1.3rem var(--clr-yellow);
 }
 
 .color-o {
   color: var(--clr-pink);
+  text-shadow: 0 0 1.3rem var(--clr-pink);
 }
 
 .container-menu {
@@ -124,10 +135,11 @@ header {
 }
 
 .scoreboard p {
-  font-family: 'Gruppo', sans-serif;  
+  font-family: "Gruppo", sans-serif;
 }
 
-.score-x, .score-o {
+.scoreboard-x,
+.scoreboard-o {
   display: flex;
   justify-content: space-around;
   font-size: 2rem;
@@ -142,22 +154,34 @@ form {
 }
 
 .inactive {
-  opacity: 25%;
+  opacity: 20%;
+  filter: blur(0.05em);
   pointer-events: none;
 }
-.winner {
+.winDiv {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 4rem;
+  line-height: 0.9;
   text-align: center;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.winner-round {
+  font-size: 2rem;
+  color: var(--clr-white);
 }
 
 input {
   background-color: rgba(30, 27, 28, 65%);
   border: none;
-  font-family: 'Gruppo', sans-serif;  
+  font-family: "Gruppo", sans-serif;
   font-size: 1.2rem;
   color: var(--clr-white);
   width: 125px;
@@ -165,15 +189,16 @@ input {
   padding: 0.5rem;
 }
 
-.score-x {
+.scoreboard-x {
   color: var(--clr-yellow);
 }
 
-.score-o {
+.scoreboard-o {
   color: var(--clr-pink);
 }
 
-.score {
+.score-x,
+.score-o {
   color: var(--clr-white);
 }
 
@@ -183,11 +208,13 @@ input {
   gap: 1rem;
 }
 
-#restartBtn, #startBtn {
+#restartBtn,
+#startBtn,
+#continueBtn {
   padding: 0.5rem;
   border-radius: 1rem;
   border: 1px solid;
-  font-family: 'Gruppo', sans-serif;
+  font-family: "Gruppo", sans-serif;
   font-size: 1.2rem;
   color: var(--clr-white);
   background: none;
@@ -196,13 +223,21 @@ input {
   gap: 10px;
 }
 
-#restartBtn:hover, #startBtn:hover {
+#continueBtn {
+  padding: 0.5rem 1rem;
+}
+
+#restartBtn:hover,
+#startBtn:hover,
+#continueBtn:hover {
   background-color: rgba(30, 27, 28, 65%);
   text-shadow: 0 0 1.3rem var(--clr-white);
   transition: 150ms;
 }
 
-#restartBtn:active, #startBtn:active {
+#restartBtn:active,
+#startBtn:active,
+#continueBtn:active {
   border: 1px solid rgba(30, 27, 28, 65%);
   background-color: rgba(30, 27, 28, 65%);
   transition: 75ms;
